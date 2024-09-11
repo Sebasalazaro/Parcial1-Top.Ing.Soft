@@ -1,0 +1,31 @@
+<!DOCtipo html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Vuelos</title>
+</head>
+<body>
+    <h1>Listar Vuelos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vuelo in vuelos %}
+            <tr>
+                <td>{{ vuelo.idVuelo }}</td>
+                <td>{{ vuelo.nombreVuelo }}</td>
+                <td>{{ vuelo.tipoVuelo }}</td>
+                <td>{{ vuelo.precioVuelo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
